@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'waypoint_rails/version'
+require 'waypoints_rails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "waypoint_rails"
+  spec.name          = "waypoints_rails"
   spec.version       = WaypointRails::VERSION
   spec.authors       = ["Richard Tan", "Tom Broomfield"]
   spec.email         = ["chardos@gmail.com", "tomplbroomfield@gmail.com"]
