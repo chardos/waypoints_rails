@@ -20,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your application.js:
+``` ruby
+//= require jquery.waypoints
+```
+
+And then, for optional waypoints shortcuts, require the following:
+``` ruby
+//= require infinite
+//= require inview
+//= require sticky
+```
 
 ## Contributing
 
@@ -29,3 +39,6 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+
+Built by the team at [Nifty](https://www.niftyforms.com/).
