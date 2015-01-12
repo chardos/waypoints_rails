@@ -1,13 +1,13 @@
-# WaypointRails
+# waypoints_rails
 
-TODO: Write a gem description
+Simple asset pipeline management for [Waypoints.js](http://imakewebthings.com/waypoints/)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'waypoint_rails'
+gem 'waypoints_rails'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install waypoint_rails
+    $ gem install waypoints_rails
 
 ## Usage
 
@@ -24,7 +24,7 @@ TODO: Write usage instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/waypoint_rails/fork )
+1. Fork it ( https://github.com/[my-github-username]/waypoints_rails/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

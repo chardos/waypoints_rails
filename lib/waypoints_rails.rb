@@ -1,6 +1,6 @@
-require "waypoint_rails/version"
+require "waypoints_rails/version"
 
-module WaypointRails
+module WaypointsRails
   module Rails
     class Engine < ::Rails::Engine
 
