@@ -5,7 +5,7 @@ require 'waypoints_rails/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "waypoints_rails"
-  spec.version       = WaypointRails::VERSION
+  spec.version       = WaypointsRails::VERSION
   spec.authors       = ["Richard Tan", "Tom Broomfield"]
   spec.email         = ["chardos@gmail.com", "tomplbroomfield@gmail.com"]
   spec.summary       = %q{Simple asset pipeline for waypoints.}
