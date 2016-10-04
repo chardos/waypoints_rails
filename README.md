@@ -20,16 +20,25 @@ Or install it yourself as:
 
 ## Usage
 
-In your application.js:
+In your application.js, include one of the following:
 ``` ruby
-//= require jquery.waypoints
+//= require waypoints/jquery.waypoints.js
+//= require waypoints/jquery.waypoints.min.js
+//= require waypoints/noframework.waypoints.js
+//= require waypoints/noframework.waypoints.min.js
+//= require waypoints/waypoints.debug.js
+//= require waypoints/zepto.waypoints.js
+//= require waypoints/zepto.waypoints.min.js
 ```
 
-And then, for optional waypoints shortcuts, require the following:
+And then, for optional waypoints shortcuts, require any of the following:
 ``` ruby
-//= require infinite
-//= require inview
-//= require sticky
+//= require waypoints/shortcuts/infinite.js
+//= require waypoints/shortcuts/infinite.min.js
+//= require waypoints/shortcuts/inview.js
+//= require waypoints/shortcuts/inview.min.js
+//= require waypoints/shortcuts/sticky.js
+//= require waypoints/shortcuts/sticky.min.js
 ```
 
 ## Contributing
