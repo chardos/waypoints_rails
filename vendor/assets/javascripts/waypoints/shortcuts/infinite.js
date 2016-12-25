@@ -1,8 +1,8 @@
 /*!
-Waypoints Infinite Scroll Shortcut - 3.0.0
-Copyright © 2011-2014 Caleb Troughton
+Waypoints Infinite Scroll Shortcut - 4.0.1
+Copyright © 2011-2016 Caleb Troughton
 Licensed under the MIT license.
-https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
+https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 */
 (function() {
   'use strict'
@@ -29,32 +29,35 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   /* Private */
   Infinite.prototype.setupHandler = function() {
     this.options.handler = $.proxy(function() {
-      window.setTimeout($.proxy(function() {
-        this.options.onBeforePageLoad()
-        this.destroy()
-        this.$container.addClass(this.options.loadingClass)
+      this.options.onBeforePageLoad()
+      this.destroy()
+      this.$container.addClass(this.options.loadingClass)
 
-        $.get($(this.options.more).attr('href'), $.proxy(function(data) {
-          var $data = $($.parseHTML(data))
-          var $newMore = $data.find(this.options.more)
+      $.get($(this.options.more).attr('href'), $.proxy(function(data) {
+        var $data = $($.parseHTML(data))
+        var $newMore = $data.find(this.options.more)
 
-          this.$container.append($data.find(this.options.items))
-          this.$container.removeClass(this.options.loadingClass)
+        var $items = $data.find(this.options.items)
+        if (!$items.length) {
+          $items = $data.filter(this.options.items)
+        }
 
-          if (!$newMore.length) {
-            $newMore = $data.filter(this.options.more)
-          }
-          if ($newMore.length) {
-            this.$more.replaceWith($newMore)
-            this.$more = $newMore
-            this.waypoint = new Waypoint(this.options)
-          }
-          else {
-            this.$more.remove()
-          }
+        this.$container.append($items)
+        this.$container.removeClass(this.options.loadingClass)
 
-          this.options.onAfterPageLoad()
-        }, this), 0)
+        if (!$newMore.length) {
+          $newMore = $data.filter(this.options.more)
+        }
+        if ($newMore.length) {
+          this.$more.replaceWith($newMore)
+          this.$more = $newMore
+          this.waypoint = new Waypoint(this.options)
+        }
+        else {
+          this.$more.remove()
+        }
+
+        this.options.onAfterPageLoad($items)
       }, this))
     }, this)
   }
